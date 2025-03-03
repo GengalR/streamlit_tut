@@ -1,4 +1,5 @@
 .idea
 .streamlit
 examples
+__pycache__
 keycloak_old.py
