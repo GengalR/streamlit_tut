@@ -16,3 +16,7 @@ know front-end web development (HTML, CSS, JavaScript).
 - Authentication & User Management – If you need login, registration, roles, and permissions, Django (with Django Auth) or Flask (with Flask-Login) is a better choice.
 - Performance & Scalability – Streamlit runs everything on the backend, making it slower for large-scale applications. Flask/Django can optimize database queries, caching, and load balancing.
 - REST APIs – If you need a backend API that serves multiple front-end clients (React, Angular, etc.), use Flask or Django REST Framework (DRF).
+
+## Conclusion
+Streamlit is perfect for short and data-focused web applications that require minimal backend logic. It’s great for prototyping, internal tools, and quick data science projects.
+However, for more complex web applications with databases, authentication, and scalability requirements, Flask or Django might be a better choice.

@@ -4,17 +4,34 @@ import data
 import charts
 import settings
 
-# --- 1. SIDEBAR MENU ---
-menu = st.sidebar.radio("Navigation", ["Home", "Data", "Charts", "Settings"])
+# Check if User is Logged in
+if not st.experimental_user.is_logged_in:
+    st.login()
+else:
+    # --- 1. SIDEBAR MENU ---
+    # Sidebar Navigation Menu
+    menu = st.sidebar.radio("Navigation", ["Home", "Data", "Charts", "Settings"])
 
-if menu == "Home":
-    home.show()
+    # Show the Username in Sidebar
+    st.sidebar.write(f"👤 Logged in as: **{st.experimental_user.name}**")
 
-elif menu == "Data":
-    data.show()
+    # Page Content
+    st.write(f"Welcome to the **{menu}** Page!")
 
-elif menu == "Charts":
-    charts.show()
+    if menu == "Home":
+        home.show()
 
-elif menu == "Settings":
-    settings.show()
+    elif menu == "Data":
+        data.show()
+
+    elif menu == "Charts":
+        charts.show()
+
+    elif menu == "Settings":
+        settings.show()
+
+    # Logout Button with Keycloak Redirect
+    LOGOUT_URL = st.secrets["auth"]["logout_url"]
+    if st.sidebar.button("🚪 Logout"):
+        st.logout()
+        st.markdown(f'<meta http-equiv="refresh" content="0;URL={LOGOUT_URL}">', unsafe_allow_html=True)

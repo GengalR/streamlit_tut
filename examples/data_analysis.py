@@ -12,7 +12,7 @@ st.set_page_config(page_title='Data Visualizer',
 # Title
 st.title('📊  Data Visualizer')
 
-working_dir = r"C:\Programming\Python\test_stuff\Streamlit"
+working_dir = r"C:\Programming\Python\streamlit_tut"
 
 # Specify the folder where your CSV files are located
 folder_path = os.path.join(working_dir, "data")  # Update this to your folder path

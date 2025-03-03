@@ -16,7 +16,7 @@ if fl is not None:
     filename = fl.name
     st.write(filename)
 else:
-    filename = r"C:\Programming\Python\test_stuff\Streamlit\data\Sample - Superstore.xls"
+    filename = r"C:\Programming\Python\streamlit_tut\data\Sample - Superstore.xls"
 
 df = pd.read_excel(filename)
 
