@@ -13,13 +13,14 @@ else:
     menu = st.sidebar.radio("Navigation", ["Home", "Data", "Charts", "Settings"])
 
     # Show the Username in Sidebar
-    st.sidebar.write(f"👤 Logged in as: **{st.experimental_user.name}**")
+    st.sidebar.write(f"Logged in as: \t **{st.experimental_user.name}**")
 
     # Page Content
     st.write(f"Welcome to the **{menu}** Page!")
 
     if menu == "Home":
         home.show()
+        st.write(st.experimental_user) # keycloak info
 
     elif menu == "Data":
         data.show()
